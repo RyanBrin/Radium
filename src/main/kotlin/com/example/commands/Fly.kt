@@ -11,14 +11,14 @@ object Fly : BaseCommand() {
     @CommandAlias("fly")
     @CommandPermission("radium.fly")
     fun execute(player: Player) {
-        player.allowFlight = true
-        player.isFlying = !player.isFlying
         if (player.isFlying) {
-            player.sendActionBar(ChatColor.GREEN.toString() + "You are now flying")
-        }
-        else {
             player.sendActionBar(ChatColor.RED.toString() + "You are no longer flying")
+            player.allowFlight = false
+            player.isFlying = false
+        } else {
+            player.sendActionBar(ChatColor.GREEN.toString() + "You are now flying")
+            player.allowFlight = true
+            player.isFlying = true
         }
-
     }
 }

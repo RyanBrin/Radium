@@ -28,6 +28,6 @@ object Gamemode : BaseCommand() {
     @CommandAlias("gmsp")
     @CommandPermission("radium.gamemode.gmsp")
     fun gmsp(player: Player) {
-        player.gameMode = GameMode.SPECTATOR // not zorba helped me put this on github :D
+        player.gameMode = GameMode.SPECTATOR
     }
 }
